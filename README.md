@@ -34,3 +34,20 @@ git init
 12. git pull забирает удаленные изменения и мержит в текущий branch
 13. git merge —abort  отменяет все изменения решения конфликтов и откатывает назад
 14. git mergetool    запускает vscode для решения конфликтоав
+
+##Description status commits
+Hash is the primary commit identifier
+HEAD -- это голова.
+Коммит -- это всему голова.
+Статусы файлов:
+*untracked
+*tracked
+*staged
+*modified
+
+```mermaid
+graph LR;
+  untracked -- "git add" --> staged;
+  staged    -- "git commit"     --> tracked/comitted;
+  modified -- "git add" --> staged,tracked;
+``` 
